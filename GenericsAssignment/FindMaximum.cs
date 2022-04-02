@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace GenericsAssignment
 {
-    internal class FindMaximum 
+    internal class FindMaximum<T> where T : IComparable // Creating a generic class
     {
-        public static T FindMax<T>(T first, T second, T third) where T : IComparable// Creating generic Method to find maximum of three having any data type
+        public static T FindMax (T first, T second, T third)// Creating generic Method to find maximum of three having any data type
         {
             //Checking that first is maximum or not
             if (first.CompareTo(second)>0 && first.CompareTo(third)>0 || first.CompareTo(second)>=0 && first.CompareTo(third)>0 ||first.CompareTo(second)>0 && first.CompareTo(third)>=0)
