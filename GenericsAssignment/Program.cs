@@ -12,7 +12,7 @@ namespace GenericsAssignment
         {
             Console.WriteLine("Welcome");
             
-            Console.WriteLine("1. Find maximum of three Integer number\n2.Find maximum of three Float number");
+            Console.WriteLine("1.Find maximum of three Integer number\n2.Find maximum of three Float number");
             Console.WriteLine("3.Find maximum of string");
             Console.WriteLine("Enter your choice : ");
             int ch = Convert.ToInt32(Console.ReadLine());   // Storing user's choice
@@ -27,7 +27,7 @@ namespace GenericsAssignment
                     second = Convert.ToInt32(Console.ReadLine());
                     Console.WriteLine("Enter third integer number : ");
                     third = Convert.ToInt32(Console.ReadLine());
-                    int maxInteger = FindMaximum.FindMaxInteger(first, second, third); // Storing value as maximum which is returned by Method
+                    int maxInteger = FindMaximum.FindMax(first, second, third); // Calling generic mehthod with integer parameter and Storing value as maximum which is returned by Method
                     Console.WriteLine($"\nMaximum integer number of ({first},{second},{third}) is : {maxInteger}");
                     break;
 
@@ -40,7 +40,7 @@ namespace GenericsAssignment
                     s = float.Parse(Console.ReadLine());
                     Console.WriteLine("Enter third float number : ");
                     t = float.Parse(Console.ReadLine());
-                    float maxFloat = FindMaximum.FindMaxFloat(f, s, t); // Storing value as maximum which is returned by Method
+                    float maxFloat = FindMaximum.FindMax(f, s, t); //  Calling generic mehthod with float parameter and Storing value as maximum which is returned by Method
                     Console.WriteLine($"Maximum float number of ({f},{s},{t}) is : {maxFloat}");
                     Console.ReadLine();
                     break;
@@ -53,7 +53,7 @@ namespace GenericsAssignment
                     b = Console.ReadLine();
                     Console.WriteLine("Enter third string : ");
                     c = Console.ReadLine();
-                    string maxString = FindMaximum.FindMaxString(a, b, c); // Storing value as maximum which is returned by Method
+                    string maxString = FindMaximum.FindMax(a, b, c); // Calling generic mehthod with string parameter and Storing value as maximum which is returned by Method
                     Console.WriteLine($"Maximum float number of ({a},{b},{c}) is : {maxString}");
                     Console.ReadLine();
                     break;

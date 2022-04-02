@@ -6,65 +6,26 @@ using System.Threading.Tasks;
 
 namespace GenericsAssignment
 {
-    internal class FindMaximum
+    internal class FindMaximum 
     {
-        public static int FindMaxInteger(int first, int second, int third) // Class Method to find maximum of three integer number
+        public static T FindMax<T>(T first, T second, T third) where T : IComparable// Creating generic Method to find maximum of three having any data type
         {
-            //Checking that first number is maximum or not
+            //Checking that first is maximum or not
             if (first.CompareTo(second)>0 && first.CompareTo(third)>0 || first.CompareTo(second)>=0 && first.CompareTo(third)>0 ||first.CompareTo(second)>0 && first.CompareTo(third)>=0)
             {
                 return first; // Retrun first as maximum
             }
-            //Checking that second number is maximum or not
+            //Checking that second is maximum or not
             if (second.CompareTo(first)>0 && second.CompareTo(third)>0 || second.CompareTo(first)>=0 && second.CompareTo(third)>0 || second.CompareTo(first)>0 && second.CompareTo(third)>=0)
             {
                 return second; // Retrun second as maximum
             }
-            //Checking that third number is maximum or not
+            //Checking that third is maximum or not
             if (third.CompareTo(first)>0 && third.CompareTo(second) >0 || third.CompareTo(first)>=0 && third.CompareTo(second) >0 || third.CompareTo(first)>0 && third.CompareTo(second) >=0)
             {
                 return third; // Retrun third as maximum
             }
-            return first; // Return first if all the integer are same 
-        }
-
-        public static float FindMaxFloat(float first,float second, float third) // Class Method to find maximum of three float number
-        {
-            //Checking that first number is maximum or not
-            if (first.CompareTo(second)>0 && first.CompareTo(third)>0 || first.CompareTo(second)>=0 && first.CompareTo(third)>0 ||first.CompareTo(second)>0 && first.CompareTo(third)>=0)
-            {
-                return first; // Retrun first as maximum
-            }
-            //Checking that second number is maximum or not
-            if (second.CompareTo(first)>0 && second.CompareTo(third)>0 || second.CompareTo(first)>=0 && second.CompareTo(third)>0 || second.CompareTo(first)>0 && second.CompareTo(third)>=0)
-            {
-                return second; // Retrun second as maximum
-            }
-            //Checking that third number is maximum or not
-            if (third.CompareTo(first)>0 && third.CompareTo(second) >0 || third.CompareTo(first)>=0 && third.CompareTo(second) >0 || third.CompareTo(first)>0 && third.CompareTo(second) >=0)
-            {
-                return third; // Retrun third as maximum
-            }
-            return first; // Return first if all the float number are same 
-        }
-        public static string FindMaxString(string first, string second, string third) // Class Method to find maximum of three string by alphabetical order
-        {
-            //Checking that first number is maximum or not
-            if (first.CompareTo(second)>0 && first.CompareTo(third)>0 || first.CompareTo(second)>=0 && first.CompareTo(third)>0 ||first.CompareTo(second)>0 && first.CompareTo(third)>=0)
-            {
-                return first; // Retrun first as maximum
-            }
-            //Checking that second number is maximum or not
-            if (second.CompareTo(first)>0 && second.CompareTo(third)>0 || second.CompareTo(first)>=0 && second.CompareTo(third)>0 || second.CompareTo(first)>0 && second.CompareTo(third)>=0)
-            {
-                return second; // Retrun second as maximum
-            }
-            //Checking that third number is maximum or not
-            if (third.CompareTo(first)>0 && third.CompareTo(second) >0 || third.CompareTo(first)>=0 && third.CompareTo(second) >0 || third.CompareTo(first)>0 && third.CompareTo(second) >=0)
-            {
-                return third; // Retrun third as maximum
-            }
-            return first; // Return first if all the string are same 
-        }
+            return first; // Return first if all values are same 
+        }       
     }
 }
