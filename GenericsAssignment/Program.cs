@@ -28,8 +28,7 @@ namespace GenericsAssignment
                     {
                         intArr[i] = Convert.ToInt32(Console.ReadLine()); // Storing integers in array which is given by user
                     }
-                    int maxInteger = FindMaximum<int>.FindMax(intArr); // Calling generic mehthod of generic class having int data type with integer parameter and Storing value as maximum which is returned by Method
-                    Console.WriteLine($"\nMaximum integer number  is : {maxInteger}");
+                    FindMaximum<int>.printValue(intArr); // Calling generic mehthod of generic class having int data type to print maximum value
                     break;
 
                 case 2:
@@ -42,8 +41,7 @@ namespace GenericsAssignment
                     {
                         floatArr[i] = float.Parse(Console.ReadLine()); // Storing float numbers in array which is given by user
                     }
-                    float maxFloat = FindMaximum<float>.FindMax(floatArr); // Calling generic mehthod of generic class having int data type with integer parameter and Storing value as maximum which is returned by Method
-                    Console.WriteLine($"\nMaximum float number is : {maxFloat}");
+                    FindMaximum<float>.printValue(floatArr); // Calling generic mehthod of generic class having float data type to print maximum value
                     break;
                 case 3:
                     //Get the multiple string from the user
@@ -55,8 +53,7 @@ namespace GenericsAssignment
                     {
                         stringArr[i] = Console.ReadLine(); // Storing string in array which is given by user
                     }
-                    string maxString = FindMaximum<string>.FindMax(stringArr); // Calling generic mehthod of generic class having string data type with string parameter and Storing value as maximum which is returned by Method
-                    Console.WriteLine($"\nMaximum string is : {maxString}");
+                    FindMaximum<string>.printValue(stringArr); // Calling generic mehthod of generic class having string data type to print maximum value
                     Console.ReadLine();
                     break;
                 default:
